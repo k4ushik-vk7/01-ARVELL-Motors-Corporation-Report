@@ -88,7 +88,7 @@ For a detailed explanation of the project, including its workflow, data preparat
 
 Aspiring Data Analyst | Excel | SQL | Python | Power BI
 
-- 💼 LinkedIn: [Add your LinkedIn Profile URL](#)
+- 💼 LinkedIn: [kaushik-vemula-xk7](www.linkedin.com/in/kaushik-vemula-xk7)
 - 🐙 GitHub: [k4ushik-vk7](https://github.com/k4ushik-vk7)
 
 ---
