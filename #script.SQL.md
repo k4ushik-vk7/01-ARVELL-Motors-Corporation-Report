@@ -1,70 +1,65 @@
-SQL Server Management Studio  ➔  New Query
+# 🗄️ ARVELL – SQL Data Preparation & Integration
 
+## 1. Database Creation & Data Import
 
+**SQL Server Management Studio ➔ New Query**
 
+```sql
 create database car;
+```
 
+Now, R-click ⏩ car ⏩ Tasks ⏩ Import Flat File...
 
+Next.. Next.. Browse the excel data. Next.. & Finish.
 
-Now,  R-click  ⏩  car  ⏩  Tasks  ⏩  Import Flat File...
+Repeat the same steps for importing 5 excel .csv files.
 
-Next..  Next..  Browse the excel data.  Next..  \&  Finish.
+**Done ✅**
 
-Repeat  the  same  steps  for  importing  5 excel  .csv  files.
+All the excel files are successfully converted into SQL tables.
 
+---
 
+## 2. Create "master_table"
 
-Done✅
+**Add ➡ New Query**
 
-all  the  excel  files  are  successfully  converted  into  SQL  tables.
+```sql
+SELECT car.[Car_ID]
 
+,[Brand] ,[Model] ,[Year] ,[Fuel_Type] ,[Transmission] ,[Color] ,[Owner_Type]
 
+,[Mileage_kmpl] ,[Price_Lakh] ,[Provider] ,[Policy_Number] ,[Expiry_Date] ,[Status]
 
-To create  "master\_table"
+,[Owner_Name] ,[Contact] ,[City] ,[Purchase_Year] ,[Sale_Price_Lakh] ,[Sale_Date]
 
-Add ➡ New Query
+,[Buyer_Name] ,[Service_Type] ,[Service_Date] ,[Service_Cost] ,[Service_Center]
 
+INTO Master_Car_Data
 
+FROM Car
 
-SELECT  car.\[Car\_ID]
+LEFT JOIN INSURANCE ON car.Car_ID = INSURANCE.Car_ID
 
-,\[Brand]  ,\[Model]  ,\[Year]  ,\[Fuel\_Type]  ,\[Transmission]  ,\[Color]  ,\[Owner\_Type]
+LEFT JOIN OWNERS ON OWNERS.Car_ID = car.Car_ID
 
-,\[Mileage\_kmpl]  ,\[Price\_Lakh]  ,\[Provider]  ,\[Policy\_Number]  ,\[Expiry\_Date]  ,\[Status]
+LEFT JOIN SALES ON SALES.Car_ID = car.Car_ID
 
-,\[Owner\_Name]  ,\[Contact]  ,\[City]  ,\[Purchase\_Year]  ,\[Sale\_Price\_Lakh]  ,\[Sale\_Date]
+LEFT JOIN SERVICE_HISTORY ON SERVICE_HISTORY.Car_ID = car.Car_ID
+```
 
-,\[Buyer\_Name]  ,\[Service\_Type]  ,\[Service\_Date]  ,\[Service\_Cost]  ,\[Service\_Center]
+**-Select all & Execute-**
 
+---
 
+## 3. Connect SQL Server to Power BI
 
-INTO  Master\_Car\_Data
+And then lastly..
 
+**Open - Power BI ≫ Blank Report ≫ Get Data ≫**
 
+SQL Server database | Connect |
 
-FROM  Car
+Enter - Server & Database name | OK |
 
-LEFT JOIN  INSURANCE  ON  car.Car\_ID  =  INSURANCE.Car\_ID
-
-LEFT JOIN  OWNERS  ON  OWNERS.Car\_ID  =  car.Car\_ID
-
-LEFT JOIN  SALES  ON  SALES.Car\_ID  =  car.Car\_ID
-
-LEFT JOIN  SERVICE\_HISTORY  ON  SERVICE\_HISTORY.Car\_ID  =  car.Car\_ID
-
-
-
-\-Select all  \&  Execute-
-
-
-
-And  then  lastly..
-
-Open - Power BI  ≫  Blank Report  ≫  Get Data  ≫
-
-SQL Server database  | Connect |
-
-Enter - Server \& Database name  | OK |
-
-Select - Master\_Car\_Data  | Load | 
-
+Select - Master_Car_Data | Load |
