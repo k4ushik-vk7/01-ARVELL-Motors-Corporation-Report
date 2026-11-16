@@ -2,9 +2,7 @@
 
 ### Automobile Business Intelligence & Performance Analytics
 
-\<p align="center">
-&#x20; \<strong>Turning Automotive Data into Meaningful Business Insights.\</strong>
-\</p>
+> **Turning Automotive Data into Meaningful Business Insights.**
 
 ---
 
@@ -47,7 +45,7 @@ The Power BI report is organised into five analytical sections:
 
 ## 🖼️ Dashboard Preview
 
-\<p align="center">   \<img src=".images/01.png" alt="ARVELL Dashboard Preview" width="100%"> \</p>
+![ARVELL Dashboard Preview](.images/01.png)
 
 *Explore the dashboard screenshots in the `.images` folder.*
 
@@ -95,4 +93,6 @@ Aspiring Data Analyst | Excel | SQL | Python | Power BI
 
 ---
 
-\<p align="center">   \<strong>ARVELL – Motors Corporation Report\</strong>\<br>   \<em>From Raw Data to Business Insights.\</em> \</p>
+### 🚘 ARVELL – Motors Corporation Report
+
+*From Raw Data to Business Insights.*
